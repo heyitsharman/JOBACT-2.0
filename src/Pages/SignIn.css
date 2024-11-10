@@ -1,0 +1,101 @@
+.yoyo {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f0f2f5;
+}
+.signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: #111;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content {
+    width: 100%;
+}
+
+.content h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBx {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputBx input[type="email"],
+.inputBx input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.inputBx input[type="email"]:focus,
+.inputBx input[type="password"]:focus {
+    border-color: #4e86e4;
+}
+
+.inputBx i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #777;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: #4e86e4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #3b72c4;
+}
+
+.inputBx input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color:  #6200EA;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inputBx input[type="submit"]:hover {
+    background-color:  #6200EA;
+}

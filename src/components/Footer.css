@@ -1,0 +1,76 @@
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 50px 20px 20px;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9; 
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footernav{
+    margin: 30px 0;
+}
+
+.footernav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footernav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover {
+    transform: scale(1.1); 
+    background-color: #111;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.socialIcons a i:hover  {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Footer Navigation Links Hover Effect */
+.footernav ul li a:hover {
+    text-decoration: underline;
+    transform: scale(1.7); 
+    color: white; 
+    font-size: 1.5rem;
+}
+

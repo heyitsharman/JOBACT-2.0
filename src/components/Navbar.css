@@ -1,0 +1,41 @@
+/* Navbar.css */
+
+/* Style for the navbar background */
+.navbar {
+    background-color: #111; /* Bootstrap's bg-dark color */
+  }
+  
+  /* Brand logo styling */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff; /* Light color for better contrast on dark background */
+  }
+  
+  /* Change link color and add hover effect */
+  .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* A yellow accent color for hover */
+  }
+  
+  /* Active link styling */
+  .nav-link.active {
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
+  /* Adjust navbar toggler icon color */
+  .navbar-toggler-icon {
+    filter: invert(1); /* Makes the toggler icon white */
+  }
+  
+  /* Add padding for navbar items */
+  .nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
