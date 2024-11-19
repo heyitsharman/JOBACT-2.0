@@ -5,23 +5,35 @@ import Home from './Pages/Home';
 import Jobs from './Pages/Jobs';
 import SignIn from './Pages/SignIn';
 import About from './Pages/About';
-// import { Routes, Route, Navigate, Outlet } from 'react-router-dom'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Router
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 const App = () => {
-    return <>
-        <Router> {/* Wrap your app inside Router */}
-      <Navbar />
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
+};
+
+const Layout = () => {
+  const location = useLocation();  // Get the current route path
+
+  return (
+    <>
+      {/* Conditionally render Navbar */}
+      {location.pathname !== '/signin' && <Navbar />}
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/jobs" element={<Jobs />} />
-        <Route path="/signin" element={<SignIn />}/>
-        <Route path= "/about" element={<About />}/>
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/about" element={<About />} />
       </Routes>
-      <Footer />
-    </Router>
-        
-        
+      
+      {/* Conditionally render Footer */}
+      {location.pathname !== '/signin' && <Footer />}
     </>
-}
+  );
+};
+
 export default App;
