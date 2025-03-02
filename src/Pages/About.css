@@ -40,7 +40,12 @@
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
-
+.card-body{
+    background-color: #111;
+}
+.card-body p{
+    color: white;
+}
 .card-body i {
     color: #6200EA;
     margin-bottom: 15px;

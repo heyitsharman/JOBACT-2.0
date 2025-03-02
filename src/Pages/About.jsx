@@ -13,7 +13,7 @@ const About = () => {
   <div className="container mission-vision-cards">
     <div className="row text-center">
       <div className="col-md-6 mb-4">
-        <div className="card p-4 shadow">
+        <div className="card p-4">
           <div className="card-body">
             <h5 className="card-title">Our Mission</h5>
             <p className="card-text">

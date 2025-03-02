@@ -167,9 +167,81 @@ const jobs = [
 ];
 
 // Routes
-app.get("/jobs", (req, res) => {
-
+app.get("/jobs", (req, res, next) => {
+  try {
+    if (!jobs || jobs.length === 0) {
+      throw new Error("No job listings available");
+    }
     res.json(jobs);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/jobs/:id", (req, res) => {
+  const jobId = parseInt(req.params.id); // Get ID from URL
+  const job = jobs.find(job => job.id === jobId); // Find the job by ID
+
+  if (!job) {
+    return res.status(404).json({ message: "Job not found" });
+  }
+
+  res.json(job); // Return the job details
+});
+
+
+app.get("/about", (req, res, next) => {
+  try {
+    const aboutData = {
+      title: "About Us",
+      description: "This is a job listing website where users can find their dream jobs.",
+      contactEmail: "contact@jobportal.com",
+    };
+
+    if (!aboutData.title || !aboutData.description) {
+      throw new Error("Missing about page details");
+    }
+
+    res.json(aboutData);
+  } catch (error) {
+    next(error);
+  }
+});
+
+
+
+app.post("/signin", (req, res, next) => {
+  try {
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+      res.status(400);
+      throw new Error("Username and password are required");
+    }
+
+    // Mock authentication (Replace with actual authentication logic)
+    if (username === "user" && password === "password") {
+      res.json({ message: "Sign-in successful", status: "success", token: "mock_token_123" });
+    } else {
+      res.status(401);
+      throw new Error("Invalid credentials");
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
+
+app.use((req, res, next) => {
+  res.status(404).json({ message: "Route not found" });
+});
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+  console.error(err.message);
+  res.status(res.statusCode === 200 ? 500 : res.statusCode).json({
+    error: err.message || "Internal Server Error",
+  });
 });
 
 app.listen(PORT, () => {

@@ -1,12 +1,14 @@
 import './Navbar.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const location = useLocation(); // Get the current route
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to='/'>
+        <Link className="navbar-brand" to="/">
           JOBACT
         </Link>
         <button
@@ -23,22 +25,22 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link fs-5 active" aria-current="page" to="/">
+              <Link className={`nav-link fs-5 ${location.pathname === '/' ? 'active' : ''}`} to="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fs-5" to="/jobs">
+              <Link className={`nav-link fs-5 ${location.pathname === '/jobs' ? 'active' : ''}`} to="/jobs">
                 Jobs
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fs-5" to="/about">
+              <Link className={`nav-link fs-5 ${location.pathname === '/about' ? 'active' : ''}`} to="/about">
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fs-5" to="/signin">
+              <Link className={`nav-link fs-5 ${location.pathname === '/signin' ? 'active' : ''}`} to="/signin">
                 Signin
               </Link>
             </li>
