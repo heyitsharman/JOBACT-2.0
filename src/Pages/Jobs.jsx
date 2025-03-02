@@ -139,7 +139,7 @@ function Jobs() {
         <div className="filter-wrapper">
           <div className="filter-sub" ref={filterRef}></div>
         </div>
-        <button ref={clearButtonRef}>Clear</button>
+        <button ref={clearButtonRef}  onClick={clearFilters}>Clear</button>
       </div>
       <div className="job-list" ref={jobListRef}></div>
     </main>

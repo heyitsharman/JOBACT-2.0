@@ -168,10 +168,8 @@ const jobs = [
 
 // Routes
 app.get("/jobs", (req, res) => {
-    const { page = 1, limit = 5 } = req.query;
-    const startIndex = (page - 1) * limit;
-    const paginatedJobs = jobs.slice(startIndex, startIndex + parseInt(limit));
-    res.json(paginatedJobs);
+
+    res.json(jobs);
 });
 
 app.listen(PORT, () => {
