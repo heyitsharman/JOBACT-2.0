@@ -5,18 +5,16 @@ const path = require("path");
 const app = express();
 const PORT = 5000;
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// Serve static files (like images)
 app.use("/assets", express.static("assets"));
 
-// File paths
+
 const jobsFilePath = path.join(__dirname, "jobs.json");
 const usersFilePath = path.join(__dirname, "users.json");
 
-// Helper functions to read and write jobs
 const readJobs = () => {
     if (!fs.existsSync(jobsFilePath)) return [];
     const data = fs.readFileSync(jobsFilePath, "utf8");
@@ -27,7 +25,6 @@ const writeJobs = (jobs) => {
     fs.writeFileSync(jobsFilePath, JSON.stringify(jobs, null, 2), "utf8");
 };
 
-// Helper functions to read and write users
 const readUsers = () => {
     if (!fs.existsSync(usersFilePath)) return [];
     const data = fs.readFileSync(usersFilePath, "utf8");
@@ -38,7 +35,11 @@ const writeUsers = (users) => {
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), "utf8");
 };
 
-// Sign-up (Register) Route
+app.get("/", (req, res)=>{
+    res.json({message: "Welcome to JOBACT", status: "Success"});
+})
+
+
 app.post("/register", (req, res, next) => {
     try {
         const { username, password } = req.body;
@@ -62,7 +63,7 @@ app.post("/register", (req, res, next) => {
     }
 });
 
-// Sign-in Route
+
 app.post("/signin", (req, res, next) => {
     try {
         const { username, password } = req.body;
@@ -85,7 +86,7 @@ app.post("/signin", (req, res, next) => {
     }
 });
 
-// Get all jobs
+
 app.get("/jobs", (req, res, next) => {
     try {
         const jobs = readJobs();
@@ -96,7 +97,7 @@ app.get("/jobs", (req, res, next) => {
     }
 });
 
-// Get job by ID
+
 app.get("/jobs/:id", (req, res) => {
     const jobId = parseInt(req.params.id);
     const jobs = readJobs();
@@ -106,7 +107,7 @@ app.get("/jobs/:id", (req, res) => {
     res.json(job);
 });
 
-// Add a new job
+
 app.post("/jobs", (req, res, next) => {
     try {
         const jobs = readJobs();
@@ -119,7 +120,6 @@ app.post("/jobs", (req, res, next) => {
     }
 });
 
-// Delete a job by ID
 app.delete("/jobs/:id", (req, res, next) => {
     try {
         let jobs = readJobs();
@@ -132,7 +132,7 @@ app.delete("/jobs/:id", (req, res, next) => {
     }
 });
 
-// About page
+
 app.get("/about", (req, res, next) => {
     try {
         res.json({
@@ -145,12 +145,10 @@ app.get("/about", (req, res, next) => {
     }
 });
 
-// 404 handler
 app.use((req, res, next) => {
     res.status(404).json({ message: "Route not found" });
 });
 
-// Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.message);
     res.status(res.statusCode === 200 ? 500 : res.statusCode).json({
@@ -158,7 +156,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Start server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
