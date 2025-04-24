@@ -1,0 +1,194 @@
+/* .container {
+    max-width: 1200px;
+    padding: 50px 20px;
+    justify-content: center;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.8rem;
+    color: #6200EA;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #6200EA;
+}
+
+.card {
+    background-color: #111;
+    border: none;
+    color: #6200EA;;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.card-body{
+    background-color: #111;
+}
+.card-body p{
+    color: white;
+}
+.card-body i {
+    color: #6200EA;
+    margin-bottom: 15px;
+}
+
+.mission-vision-cards .card-title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.container .text-center .choose {
+    font-size: 2rem;
+    color: #6200EA;
+    margin-bottom: 30px;
+  
+}
+.why-choose-us ul {
+    list-style: none;
+    padding-left: 0;
+    color: #555;
+}
+
+.why-choose-us li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.why-choose-us i {
+    color: #6200EA;
+    margin-right: 10px;
+}
+
+.our-values h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.our-values .card-title {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.our-values .card-text {
+    color: #6200EA;
+    font-size: 1rem;
+}
+
+.icon {
+    color: #6200EA;
+}
+
+.why-choose-us ul li i{
+    font-size: 1.2rem;
+    color: #6200EA;
+} */
+
+
+
+/* Reset some default styles */
+body, h1, h2, h5, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+  
+  body {
+    background-color: white; /* deep black background */
+    line-height: 1.6;
+    
+    align-items: center;
+  }
+  
+  .container {
+    padding: 40px 20px;
+  }
+  
+  .about-header {
+    margin-bottom: 40px;
+  }
+  
+  .about-header h1 {
+    font-size: 48px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .about-header .lead {
+    font-size: 20px;
+    color: black;
+  }
+  
+  .card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #ccc;
+  }
+  
+  .icon {
+    margin-top: 20px;
+    color: #aaa;
+  }
+  
+  .choose h2,
+  .our-values h2 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .why-choose-us ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .why-choose-us li {
+    font-size: 18px;
+    color: black;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+  
+  .why-choose-us i {
+    color: #ffffff;
+    margin-right: 10px;
+  }
+  

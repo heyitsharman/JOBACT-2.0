@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jobs</title>
+  <link rel="stylesheet" href="/css/jobs.css" />
+  <link rel="stylesheet" href="/css/Navbar.css" />
+  <script defer src="/js/filter.js"></script>
+</head>
+<body>
+  <%- include("partials/navbar") %>
+
+  <main>
+    <div class="filter" style="display: none;">
+      <div class="filter-wrapper">
+        <div class="filter-sub" id="filterRef"></div>
+      </div>
+      <button id="clearButton">Clear</button>
+    </div>
+
+    <div class="job-list" id="jobListRef">
+      <% jobs.forEach((job) => { %>
+        <div class="container <%= job.featured ? 'featured' : '' %>">
+          <img src="<%= job.logo %>" alt="logo" />
+          <div class="head">
+            <div class="wrapper">
+              <div class="top">
+                <h2><%= job.company %></h2>
+                <div class="stat">
+                  <% if (job.new) { %><span class="new">New!</span><% } %>
+                  <% if (job.featured) { %><span class="feature">Featured</span><% } %>
+                </div>
+              </div>
+              <a href="#"><%= job.position %></a>
+              <ul class="availability">
+                <li><%= job.postedAt %></li>
+                <li><%= job.contract %></li>
+                <li><%= job.location %></li>
+              </ul>
+            </div>
+            <hr />
+            <div class="tags">
+              <button data-type="<%= job.role %>"><%= job.role %></button>
+              <button data-type="<%= job.level %>"><%= job.level %></button>
+              <% job.languages.forEach(lang => { %>
+                <button data-type="<%= lang %>"><%= lang %></button>
+              <% }) %>
+              <% job.tools.forEach(tool => { %>
+                <button data-type="<%= tool %>"><%= tool %></button>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+</main>

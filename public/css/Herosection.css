@@ -1,0 +1,66 @@
+:root {
+    --greyColor: #f6f8fa;
+    --labelColor: #64b1f5;
+    --yellowColor: #ffd723;
+    }
+    .join{
+        width: 100%;
+        height: 350px;
+        background-image:url(https://img.freepik.com/free-photo/new-york-city_649448-1679.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: var(--whiteColor);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+        align-items: center;
+        position: relative;
+    }
+    
+    .join::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(180deg, rgba(7, 25, 44, 0.6) 0%, rgba(88, 93, 99, 0.5) 100%), linear-gradient(180deg, rgba(58, 63, 69, 0.65) 0%,transparent 100%);
+        z-index: 1;
+    }
+    
+    .join-detail {
+        min-width: 280px;
+        width: 50%;
+        z-index: 2;
+        margin-bottom: 1rem;
+    }
+    
+    .join-detail > h1{
+        color:var(--greyColor);
+        font-size: 36px;
+        letter-spacing: 2;
+    }
+    
+    .join-btn{
+        font-size: 1.4rem;
+        width: 200px;
+        padding: 1rem;
+        border: none;
+        background-color: var(--yellowColor);
+        box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .join-btn a{
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+    
+    .join-btn:hover{
+        background: transparent;
+        border: 2px solid var(--yellowColor);
+        color: var(--yellowColor);
+    }

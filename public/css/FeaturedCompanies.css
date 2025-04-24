@@ -1,0 +1,141 @@
+/* .featured {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: var(--greyColor);
+}
+
+.featured h1 {
+    color: var(--light);
+}
+
+.section-title {
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.5;
+    font-size: 36px;
+}
+
+.featured-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    padding: 2% 5%;
+}
+
+.featured-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--whiteColor);
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+}
+
+.featured-card p{
+    font-size: 1.3rem;
+    color: var(--light);
+    padding: 1rem;
+}
+
+.featured-card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.featured-image {
+    height: 30px;
+    margin-bottom: 0.2rem;
+} */
+
+
+
+.featured {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: var(--greyColor);
+}
+
+.featured h1 {
+    color: var(--light);
+}
+
+.section-title {
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.5px;
+    font-size: 2.25rem; /* 36px */
+}
+
+.featured-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    padding: 2% 5%;
+}
+
+.featured-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--whiteColor);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.featured-card p {
+    font-size: 1.3rem;
+    color: var(--light);
+    padding: 1rem;
+    text-align: center;
+}
+
+.featured-card:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.featured-image {
+    height: 30px;
+    margin-bottom: 0.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .featured-wrapper {
+        padding: 2% 3%;
+        gap: 1.5rem;
+    }
+
+    .featured-card p {
+        font-size: 1.1rem;
+    }
+
+    .featured {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .featured-card p {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .featured-image {
+        height: 24px;
+    }
+}
+

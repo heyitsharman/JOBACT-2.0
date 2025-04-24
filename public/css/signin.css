@@ -1,0 +1,78 @@
+/* Background */
+.auth-background {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #0f0f0f, #1a1a1a);
+}
+
+/* Container */
+.auth-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    text-align: center;
+    width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Title */
+.auth-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.auth-input {
+    width: 90%;
+    padding: 12px;
+    margin: 12px 0;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+/* Input Focus */
+.auth-input:focus {
+    border-color: #00e6e6;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Submit Button */
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background: linear-gradient(135deg, #00e6e6, #009999);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button Hover */
+.auth-button:hover {
+    background: linear-gradient(135deg, #009999, #006666);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Toggle Text */
+.auth-toggle-text {
+    margin-top: 12px;
+    color: #00e6e6;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}

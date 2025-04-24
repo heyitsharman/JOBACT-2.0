@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= isSignIn ? "Sign In" : "Register" %></title>
+  <link rel="stylesheet" href="/css/signin.css">
+</head>
+<body>
+  <div class="auth-background">
+    <div class="auth-container">
+      <h2 class="auth-title"><%= isSignIn ? "Sign In" : "Register" %></h2>
+
+      <form action="<%= isSignIn ? '/signin' : '/register' %>" method="POST">
+
+        <input 
+    type="text" 
+    name="username" 
+    placeholder="Username" 
+    required 
+    class="auth-input"
+  />
+  <input 
+    type="password" 
+    name="password" 
+    placeholder="Password" 
+    required 
+    class="auth-input"
+  />
+  <button type="submit" class="auth-button">Submit</button>
+       
+      </form>
+
+      <form action="/register" method="GET">
+        <<button type="submit" class="auth-toggle-text">
+          <%= isSignIn ? "Don't have an account? Register" : "Already have an account? Sign In" %>
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

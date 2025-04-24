@@ -1,0 +1,90 @@
+<!-- Splide CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css" />
+<link rel = "stylesheet" href="/css/Testimonials.css">
+
+<section class="testimonial-container">
+    <div class="title">
+      <h2>Testimonial</h2>
+      <p>What our clients are saying.</p>
+    </div>
+  
+    <div class="slider-container">
+      <div class="splide" id="testimonial-slider">
+        <div class="splide__track">
+          <ul class="splide__list">
+  
+            <li class="splide__slide">
+              <img class="review-img" src="/images/profile1.jpg" alt="User 1" />
+              <div class="content">
+                <p class="text">This website helped me land my dream job!</p>
+                <div class="info">
+                  <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                  </div>
+                  <p class="user">Aman Singh</p>
+                </div>
+              </div>
+            </li>
+  
+            <li class="splide__slide">
+              <img class="review-img" src="/images/profile2.jpg" alt="User 2" />
+              <div class="content">
+                <p class="text">Very helpful and easy to use.</p>
+                <div class="info">
+                  <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                  </div>
+                  <p class="user">Priya Sharma</p>
+                </div>
+              </div>
+            </li>
+  
+            <li class="splide__slide">
+              <img class="review-img" src="/images/profile3.jpg" alt="User 3" />
+              <div class="content">
+                <p class="text">Great UI and smooth experience!</p>
+                <div class="info">
+                  <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                  </div>
+                  <p class="user">Rahul Mehta</p>
+                </div>
+              </div>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Splide CSS -->
+
+<!-- Splide JS -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#testimonial-slider', {
+      perPage: 1,
+      autoplay: true,
+      interval: 3000,
+      speed: 1000,
+      rewind: true,
+      rewindByDrag: true,
+    }).mount();
+  });
+</script>
+  

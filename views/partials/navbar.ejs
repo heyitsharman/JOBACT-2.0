@@ -1,0 +1,18 @@
+<link rel = "stylesheet" href="/css/Navbar.css">
+<nav class="navbar">
+  <a class="navbar-brand" href="/">JOBACT</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link <%= active === 'home' ? 'active' : '' %>" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <%= active === 'jobs' ? 'active' : '' %>" href="/jobs">Jobs</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <%= active === 'about' ? 'active' : '' %>" href="/about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <%= active === 'signin' ? 'active' : '' %>" href="/signin">Signin</a>
+    </li>
+  </ul>
+</nav>
