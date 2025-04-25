@@ -6,8 +6,6 @@ import mongoose from 'mongoose';
 import User from './models/Users.js'; // Adjust path if needed
 import bcrypt from 'bcrypt';
 
-
-
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,8 +19,11 @@ const jobs = JSON.parse(fs.readFileSync(path.join(__dirname, 'jobs.json'), 'utf8
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('home', { active: 'home' });
+  res.render('signin', { isSignIn: true });
 });
+app.get('/home',(req,res)=>{
+  res.render('home',{active: 'home'});
+})
 
 app.get('/jobs', (req, res) => {
   res.render('jobs', { active: 'jobs', jobs }); 
@@ -52,7 +53,7 @@ app.post('/signin', async (req, res) => {
     }
 
     // Optional: Set session or token here
-    res.redirect('/');
+    res.redirect('/home');
 
   } catch (err) {
     console.error(err);

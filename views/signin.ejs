@@ -30,8 +30,8 @@
        
       </form>
 
-      <form action="/register" method="GET">
-        <<button type="submit" class="auth-toggle-text">
+      <form action="<%= isSignIn ? '/register' : '/signin' %>" method="GET">
+        <button type="submit" class="auth-toggle-text">
           <%= isSignIn ? "Don't have an account? Register" : "Already have an account? Sign In" %>
         </button>
       </form>
